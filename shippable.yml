@@ -10,7 +10,7 @@ python:
 
 before_install:
 - pwd
-- sudo apt-get install gfortran
+- sudo apt-get install gfortran cmake
 - make hashdist
 - make stack
 
