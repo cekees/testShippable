@@ -1,0 +1,22 @@
+language: python
+
+env:
+- TEST_PROFILE="test.proteus.yaml"
+
+python:
+- 2.7
+
+before_install:
+- pwd
+- make hashdist
+- make stack
+
+install:
+- make profile
+
+script:
+- make profile
+
+notifications:
+
+email: false
