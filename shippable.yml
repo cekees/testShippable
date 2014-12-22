@@ -1,5 +1,3 @@
-build_image: cekees/minv2:proteus
-
 cache: true
 
 language: python
@@ -13,11 +11,13 @@ python:
 before_install:
 - pwd
 - sudo apt-get install gfortran cmake libblas-dev liblapack-dev
-- make hashdist
-- make stack
+- wget http://proteus.usace.army.mil/files/hashdist.tgz
+- tar xzvf hashdist.tgz $HOME
+- ls  ~/.hashdist/bld
 
 install:
-- make profile
+- make hashdist
+- make stack
 
 script:
 - make profile
