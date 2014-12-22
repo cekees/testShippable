@@ -10,7 +10,7 @@ python:
 
 before_install:
 - pwd
-- sudo apt-get install gfortran cmake libblas-dev libblas3 liblapack-dev liblapack3
+- sudo apt-get install gfortran cmake libblas-dev liblapack-dev
 - make hashdist
 - make stack
 
