@@ -12,15 +12,16 @@ before_install:
 - pwd
 - sudo apt-get install gfortran cmake libblas-dev liblapack-dev
 - wget http://proteus.usace.army.mil/files/hashdist.tgz
-- tar xzvf hashdist.tgz $HOME
-- ls  ~/.hashdist/bld
+- tar xzvf hashdist.tgz 
+- mv .hashdist $HOME
 
 install:
 - make hashdist
 - make stack
+- make profile
 
 script:
-- make profile
+- ./linux2/bin/python -c "import  numpy;  numpy.test()"
 
 notifications:
 
