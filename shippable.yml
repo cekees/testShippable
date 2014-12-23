@@ -10,10 +10,10 @@ python:
 
 before_install:
 - pwd
-- sudo apt-get install gfortran cmake libblas-dev liblapack-dev
-- wget http://proteus.usace.army.mil/files/hashdist.tgz
-- tar xzf hashdist.tgz 
-- mv .hashdist $HOME
+#- sudo apt-get install gfortran cmake libblas-dev liblapack-dev
+#- wget http://proteus.usace.army.mil/files/hashdist.tgz
+#- tar xzf hashdist.tgz 
+#- mv .hashdist $HOME
 
 install:
 - make hashdist
