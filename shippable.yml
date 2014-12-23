@@ -18,7 +18,7 @@ install:
 - make profile
 
 script:
-- ./linux2/bin/python -c "import  numpy;  numpy.test()"
+- nosetests test --with-xunit --xunit-file=shippable/testresults/nosetests.xml
 
 notifications:
 
