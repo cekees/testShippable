@@ -23,6 +23,9 @@ install:
 script:
 - nosetests test --with-xunit --xunit-file=shippable/testresults/nosetests.xml --with-coverage --cover-package=petsc4py --cover-branches --cover-xml --cover-xml-file=shippable/codecoverage/coverage.xml
 
-notifications:
+commit_container: cekees/testShippable
 
-email: false
+notifications:
+    email:
+        - cekees@gmail.com
+
