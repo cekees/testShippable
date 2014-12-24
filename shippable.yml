@@ -18,6 +18,8 @@ install:
 - make profile
 
 script:
+- export  PATH=$PWD/linux2/bin:$PATH
+- export  LD_LIBRARY_PATH=$PWD/linux2/lib:$LD_LIBRARY_PATH
 - nosetests test --with-xunit --xunit-file=shippable/testresults/nosetests.xml
 
 notifications:
